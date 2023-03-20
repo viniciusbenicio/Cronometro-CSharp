@@ -1,14 +1,24 @@
 ﻿
 
 //Iniciando o Cronometro...
-Iniciar();
+Menu();
 
 
 
-
-static void Iniciar()
+static void Menu()
 {
-    int tempo = 10;
+    Console.Clear();
+
+    Console.WriteLine("S = Segundos...");
+    Console.WriteLine("M = Minutos...");
+    Console.WriteLine("0 = Sair...");
+    Console.WriteLine("Quanto tempo deseja contar?...");
+}
+
+
+static void Iniciar(int tempo)
+{
+   
     int tempoAtual = 0;
 
     while (tempoAtual != tempo)
@@ -19,4 +29,8 @@ static void Iniciar()
         Console.WriteLine(tempoAtual);
         Thread.Sleep(1000);
     }
+
+    Console.Clear();
+    Console.WriteLine($"Cronometro finalizado....");
+    Thread.Sleep(1000);
 }
